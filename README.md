@@ -11,31 +11,10 @@
 
 
 
-### Features
+### Features 
+--> https://trello.com/b/uFdzdFA6/ecommerce-springboot
 ##### BackEnd
-- [ ] Creation of classes
-- -[x] Address class
-- -[x] Access class
-- -[x] User class
-- -[x] User-Access
-- -[x] Product brand class
-- -[x] Phone brand class
-- -[x] Class Types of person (physical or legal)
-- -[x] Accounts Payable Class
-- -[x] Forms of payment
-- -[x] Accounts Receivable Class
-- -[x] Discount coupon class
-- -[x] Product class
-- -[x] Product Image class
-- -[x] Invoice class
-- - [ ] Tracking class
-- - [ ] Class items for sale
-- - [ ] Product Reviews class
-- [ ] Repositories
-- [ ] Controllers
-- [ ] Security
-- [ ] Token (JWT)
-- [ ] Deploy 
+- [ ] Creation of classes and database modeling
 
 ##### FrontEnd
 

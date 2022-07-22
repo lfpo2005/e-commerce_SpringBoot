@@ -209,6 +209,7 @@ mvnw
 .factorypath
 target
 .jpb
+.mvn/wrapper
 
 ### VisualStudioCode ###
 .vscode/*
