@@ -4,13 +4,8 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Data
@@ -22,7 +17,20 @@ public class MarcaProduto implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_marca_produto")
     private Long id;
-    @Column(nullable = false, length = 30)
+
+
+    private Integer nota;
+
+    @Column(nullable = false, length = 244)
     private String descricao;
+
+    @ManyToOne(targetEntity = Pessoa.class)
+    @JoinColumn(name = "pessoa_id_", foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "pessoa_fx"))
+    @NotNull
+    private Pessoa pessoa;
+
+    @ManyToOne
+    @JoinColumn(name = "produto_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "produto_fx"))
+    private Produto produto;
 
 }

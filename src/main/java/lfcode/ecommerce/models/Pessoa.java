@@ -35,7 +35,7 @@ public abstract class Pessoa implements Serializable {
 	@Column(nullable = false, unique = true, length = 50)
 	private String email;
 
-	@OneToMany(mappedBy = "pessoaEndereco", orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "pessoa", orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Endereco> enderecos = new ArrayList<Endereco>();
 
 	@OneToMany(mappedBy = "pessoaFone", orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
